@@ -1,0 +1,19 @@
+
+
+<! DOCTYPE html>
+  
+  <html>
+    <head>
+     <title> Map Data</title> 
+    </head>
+    
+    <body>
+      <h1> Welcome!</h1>
+      <p> Map Data will go here</p>
+      <p> {{Map.State}}</p>
+        {% for map in maps %}
+        <!-- {# Each "team" is a team model object. #}-->
+       <li>{{ map.State}} {{map.Year}} {{map.Eye}} {{map.Foot}} {{map.Blood}} {{map.Pne}}</li>
+        {% endfor %}
+    </body>
+  </html>

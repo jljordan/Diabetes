@@ -1,0 +1,47 @@
+[
+    
+    { "pk": 1,
+     "model": "diabetesapp.Map",
+     "fields": {
+        "State": "Alabama",
+        "Year": "2002",
+        "Prevalence": "50%",
+        "Eye": "20%",
+        "Blood": "10%",
+        "Foot": "24%",
+        "A1C": "25%",
+        "Influenza": "67%",
+        "Pne": "2%"
+        
+     }
+    
+    },
+    
+    
+    
+    {
+        "pk": 2,
+     "model": "diabetesapp.Map",
+     "fields": {
+        "State": "Arkansas",
+        "Year": "2003",
+        "Prevalence": "5%",
+        "Eye": "40%",
+        "Blood": "14%",
+        "Foot": "13%",
+        "A1C": "10%",
+        "Influenza": "6%",
+        "Pne": "62%"
+        
+    }
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+]
