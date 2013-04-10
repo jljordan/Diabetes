@@ -1,12 +1,49 @@
 <! DOCTYPE html>
-  
-  <html>
-    <head>
-     <title> Diabetes Health Info Page</title> 
-    </head>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Diabetes{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+{% block addl_styles %}
+   <!-- Le styles -->
+    <link href="{{STATIC_URL}}/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <link href="{{STATIC_URL}}/css/bootstrap-responsive.css" rel="stylesheet">
+
+    {% endblock %}
+  </head>
+
     
     <body>
-      <h1> Welcome!</h1>
-      <p> Facts about Diabetes</p>
-    </body>
-  </html>
+    <div class="container">
+        {% block content %}{% endblock %}   
+    </div>
+
+      <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{STATIC_URL}}/js/jquery.js"></script>
+    <script src="{{STATIC_URL}}/js/bootstrap.js"></script>
+
+
+</body>
+</html>
