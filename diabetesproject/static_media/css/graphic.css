@@ -1,0 +1,595 @@
+body {
+    background-color: #333;
+    box-shadow: 0px -30px 70px #000 inset;
+    padding: 0px;
+}
+
+#control {
+    background-color: #222;
+    box-shadow: 0px 1px 70px 30px #222;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    z-index: 0;
+    
+}
+
+#next {
+    float: right;
+    margin: 5px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+#next:hover {
+    cursor: e-resize;
+}
+
+#previous {
+    float: left;
+    margin: 5px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+.nomore {
+    visibility: hidden;
+}
+
+#graphic {
+    width: 600px;
+    height: 550px;
+    overflow: hidden;
+    position: absolute;
+    top: 25px;
+
+}
+
+#information {
+    color: #FFF;
+    font-size: 24px;
+    font-family: Helvetica;
+    text-shadow: .01em .01em .2em #EEE,
+        -.01em -.01em .2em #EEE;
+
+    overflow: hidden;
+    width: 250px;
+    background-color: #222;
+    padding: 10px;
+    box-shadow: 1px 1px 40px 10px #222,
+        -1px -1px 40px 10px #222;
+    
+    position: absolute;
+    top: 50px;
+    left: 550px;
+}
+
+#bodypart {
+    position: fixed;
+    width: 60%;
+    text-align: center;
+    left: 20%;
+    bottom: 15px;
+    color: #FFF;
+    font-size: 28px;
+    font-family: Helvetica; 
+    text-shadow: .01em .01em .2em #EEE,
+        -.01em -.01em .2em #EEE;
+    
+}
+
+/*BODY PARTS*/
+
+.bodyandhair {
+    position: absolute;
+    top: 7px;
+    left: 8px;
+}
+
+.heart {
+    position: absolute;
+    top: 165px;
+    left: 95px;
+    width: 70px;
+    height: 70px;
+    opacity: 0;
+    
+        -webkit-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        -moz-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        -o-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+}
+
+.stomach {
+    position: absolute;
+    top: 220px;
+    left: 66px;
+    width: 90px;
+    height: 90px;
+    opacity: 0;
+    
+        -webkit-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        -moz-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        -o-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+}
+
+.kidneys {
+    position: absolute;
+    top: 240px;
+    left: 57px;
+    width: 100px;
+    height: 50px;
+
+    opacity: 0;
+    
+        -webkit-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        -moz-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        -o-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+}
+
+.bladder {
+    position: absolute;
+    top: 270px;
+    left: 87px;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    
+        -webkit-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        -moz-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        -o-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;    
+}
+
+.largeintestine {
+    position: absolute;
+    top: 240px;
+    left: 60px;
+    width: 90px;
+    height: 70px;
+    opacity: 0;
+    
+        -webkit-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        -moz-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        -o-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+        transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;  
+}
+
+.eyes {
+    position: absolute;
+    top: 70px;
+    left: 73px;
+}
+
+.eyesblur {
+    position: absolute;
+    top: 64px;
+    left: 67px;
+    opacity: 0;
+    
+    transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+}
+
+
+.mouth {
+    position: absolute;
+    top: 110px;
+    left: 90px;
+    opacity: 100;
+    
+    transition: transform 1s, opacity 1s;
+    transition: -ms-transform 1s, opacity 1s;
+    -moz-transition: -moz-transform 1s, opacity 1s;
+    -webkit-transition: -webkit-transform 1s, opacity 1s;
+    -o-transition: o-transform 1s, opacity 1s;
+}
+
+.mouthopen {
+    position: absolute;
+    top: 108px;
+    left: 100px;
+    opacity: 0;
+    
+    transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    
+}
+
+/*OTHER SHIT*/
+
+.bloodpressuregauge {
+    position: absolute;
+    top: 1000px;
+    left: 170px;
+    
+    -webkit-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+    -moz-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+    -o-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+    transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+
+}
+
+.gaugebackground {
+    position: absolute;
+    left: 177px;
+    top: 208px;
+    height: 30px;
+    width: 30px;
+    opacity: 0;
+    
+    -webkit-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+    -moz-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+    -o-transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+    transition: opacity 1s, width 1s, height 1s, top 1s, left 1s;
+}
+
+.gaugeneedle {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    left: 177px;
+    top: 210px;
+    
+    transition: transform 1s, opacity 1s, width 1s, height 1s, top 1s, left 1s;
+    transition: -ms-transform 1s, opacity 1s, width 1s, height 1s, top 1s, left 1s;
+    -moz-transition: transform 1s, opacity 1s, width 1s, height 1s, top 1s, left 1s;
+    -webkit-transition: -webkit-transform 1s, opacity 1s, width 1s, height 1s, top 1s, left 1s;
+    -o-transition: o-transform 1s, opacity 1s, width 1s, height 1s, top 1s, left 1s;
+}
+
+.icepack {
+    position: absolute;
+    left: 50px;
+    top: -100px;
+    height: 60px;
+    
+    transition: top 1s;
+    -moz-transition: top 1s;
+    -o-transition: top 1s;
+    -webkit-transition: top 1s;
+    
+}
+
+.headnausea {
+    position: absolute;
+    top: 7px;
+    left: 35px;
+    opacity: 0;
+    
+    transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+}
+
+.weightgain {
+    position: absolute;
+    top: 170px;
+    left: 43px;
+    width: 0px;
+    visibility: hidden;
+    transition: width 2s;
+    -moz-transition: width 2s;
+    -webkit-transition: width 2s;
+    -o-transition: width 2s;
+}
+
+.circleL {
+    position: absolute;
+    top: 450px;
+    left: 24px;
+    width: 80px;
+    opacity: 0;
+    transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+}
+
+.circleR {
+    position: absolute;
+    top: 450px;
+    left: 110px;
+    width: 80px;
+    opacity: 0;
+    transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+}
+
+.sweatdrop {
+    position: absolute;
+    top: 30px;
+    left: 150px;
+    opacity: 0;
+    transition: top 1s;
+    -moz-transition: top 1s;
+    -webkit-transition: top 1s;
+    -o-transition: top 1s;
+}
+
+
+/*SLIDE 1*/
+
+    .slide1 .components {
+        opacity: 100;
+    }
+
+
+/*SLIDE 2*/
+    
+    .slide2 .heart {
+        top: 100px;
+        left: 250px;
+        opacity: 50;
+        width: 320px;
+        height: 320px;
+    }
+    
+/*SLIDE 3*/
+    
+    .slide3 .bloodpressuregauge {
+        top: 200px;
+    }
+
+    .slide3 .heart {
+        opacity: 100;
+    }
+
+
+/*SLIDE 4*/
+
+    .slide4 .bloodpressuregauge {
+        top: 200px;
+    }
+
+    .slide4 .heart {
+        opacity: 100;
+    }
+    
+    .slide4 .gaugebackground {
+        opacity: 100;
+        height: 150px;
+        width: 150px;
+        left: 315px;
+        top: 100px;
+    }
+    
+    .slide4 .gaugeneedle {
+        opacity: 100;
+        left: 378px;
+        top: 117px;
+        height: 110px;
+    }
+    
+    .rotateneedle {
+        transform:rotate(180deg);
+        -ms-transform:rotate(180deg);
+        -webkit-transform:rotate(180deg);
+    }
+
+/*SLIDE 5*/
+    
+    .slide5 .mouth {
+        transform:rotate(180deg);
+        -ms-transform:rotate(180deg);
+        -webkit-transform:rotate(180deg);                
+    }
+    
+    .slide5 .heart {
+        opacity: 100;
+    }
+
+/*SLIDE 6*/
+
+    .slide6 .kidneys {
+        top: 100px;
+        left: 250px;
+        opacity: 50;
+        width: 320px;
+        height: 320px;
+    }
+    
+    .slide6 .heart {
+        opacity: 100;
+    }
+    
+/*SLIDE 7 */
+
+    .slide7 .heart {
+        opacity: 100;
+    }
+    
+    .slide7 .kidneys {
+        opacity: 100;
+    }
+
+/*SLIDE 8*/
+
+    .slide8 .headnausea {
+        opacity: 100;
+    }
+
+    .slide8 .heart {
+        opacity: 100;
+    }
+    
+    .slide8 .kidneys {
+        opacity: 100;
+    }
+    
+/*SLIDE 9*/
+
+    .slide9 .icepack {
+        top: 0px;
+    }
+
+    .slide9 .headnausea {
+        opacity: 100;
+    }
+
+    .slide9 .heart {
+        opacity: 100;
+    }
+    
+    .slide9 .kidneys {
+        opacity: 100;
+    }
+    
+/*SLIDE 10*/
+    
+    .slide10 .heart {
+        opacity: 100;
+    }
+    
+    .slide10 .kidneys {
+        opacity: 100;
+    }
+    
+    .slide10 .mouth {
+        transform:rotate(180deg);
+        -ms-transform:rotate(180deg);
+        -webkit-transform:rotate(180deg); 
+    }
+    
+    .slide10 .weightgain {
+        visibility: visible;
+        width: 129px;
+    }
+    
+    .slide10 .icepack {
+        top: 0px;
+    }
+    
+    .slide10 .headnausea {
+        opacity: 100;
+    }
+    
+/*SLIDE 11*/
+
+    .slide11 .stomach {
+        top: 100px;
+        left: 250px;
+        opacity: 100;
+        width: 320px;
+        height: 320px;
+        
+    }
+    
+    .slide11 .heart {
+        opacity: 100;
+    }
+    
+    .slide11 .kidneys {
+        opacity: 100;
+    }
+
+/*SLIDE 12*/
+
+    .slide12 .heart {
+        opacity: 100;
+    }
+    
+    .slide12 .kidneys {
+        opacity: 100;
+    }
+    
+    .slide12 .stomach {
+        opacity: 100;
+    }
+    
+    .slide12 .largeintestine {
+        top: 100px;
+        left: 250px;
+        opacity: 100;
+        width: 270px;
+        height: 270px;
+    }
+    
+/*SLIDE 13*/
+
+    .slide13 .largeintestine {
+        opacity: 100;
+    }
+    
+    .slide13 .heart {
+        opacity: 100;
+    }
+    
+    .slide13 .kidneys {
+        opacity: 100;
+    }
+    
+    .slide13 .stomach {
+        opacity: 100;
+    }
+    
+    .slide13 .bladder {
+        top: 100px;
+        left: 250px;
+        opacity: 100;
+        width: 320px;
+        height: 320px;
+    }
+    
+    .slide13 .mouth {
+        opacity: 0;
+    }
+    
+    .slide13 .mouthopen {
+        opacity: 100;
+    }
+    
+/*SLIDE 14*/
+    
+    .blureyes {
+        opacity: 100;
+    }
+
+    
+/*SLIDE 15*/
+
+    .slide15 .eyesblur {
+        opacity: 100;
+    }
+   
+    .slide15 .sweatdrop {
+        opacity: 100;   
+    }
+    
+    .drop {
+        top: 110px;
+    }
+    
+/*SLIDE 16*/
+
+    .slide16 .eyesblur {
+        opacity: 100;
+    }
+
+    .slide16 .sweatdrop {
+        opacity: 100;
+        top: 110;
+    }
+    
+    .slide16 .circleL {
+        opacity: 100;
+    }
+    
+    .slide16 .circleR {
+        opacity: 100;
+    }
+    
+    
