@@ -23,3 +23,6 @@ def mapData(request):
     context =   {'maps':maps}
                 
     return render(request, 'map_list.html', context)
+
+def graphic(request):
+    return render(request, "graphic.html")

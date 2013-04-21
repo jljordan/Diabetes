@@ -1,12 +1,49 @@
 <! DOCTYPE html>
-  
-  <html>
-    <head>
-     <title> Diabetes Health Info Page</title> 
-    </head>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Diabetes{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    
+  {% block addl_styles %}
+   <!-- Le styles -->
+    <link href="{{STATIC_URL}}/css/bootstrap.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/css/slider.css" />
+    <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/css/jquery.jscrollpane.css" media="all" />
+
+    <link href="{{STATIC_URL}}/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="{{STATIC_URL}}/css/app.css" rel="stylesheet">
+  {% endblock %}
+
+  <!--shit for graphic-->
+  <link href="{{STATIC_URL}}/css/graphic.css" rel="stylesheet">
+  <script href="{{STATIC_URL}}/js/graphicanimate.js"></script>
+
+</head>
+
     
     <body>
-      <h1> Welcome!</h1>
-      <p> Facts about Diabetes</p>
-    </body>
-  </html>
+    <div class="container">
+        {% block content %}{% endblock %}   
+    </div>
+
+      <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{STATIC_URL}}/js/bootstrap.js"></script>
+
+    <script src="{{STATIC_URL}}/js/jquery.easing.1.3.js"></script>
+    <!-- the jScrollPane script -->
+    <script  src="{{STATIC_URL}}/js/jquery.mousewheel.js"></script>
+    <script src="{{STATIC_URL}}/js/jquery.contentcarousel.js"></script>
+      <script type="text/javascript">
+       $('#ca-container').contentcarousel();
+      </script>
+
+</body>
+</html>
