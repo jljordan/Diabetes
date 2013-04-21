@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     # url(r'^diabetesproject/', include('diabetesproject.foo.urls')),
  url(r'^$', 'diabetesapp.views.home', name='home'),
  url(r'^map-data/$', 'diabetesapp.views.mapData', name='map_list'),
- url(r'^graphic/$)', 'diabetesapp.views.graphc', name='graphic'),
+ url(r'^graphic/$', 'diabetesapp.views.graphic', name='graphic'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
