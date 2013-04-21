@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% load url from future %}
+
+{% block content %}
+
+<div id="graphic">
+    <img src="{{STATIC_URL}}/img/svg/body.svg" type="image/svg+xml" class="bodyandhair">
+    
+    <img src="{{STATIC_URL}}/img/svg/eyes.svg" type="image/svg+xml"  class="eyes"/>
+    <img src="{{STATIC_URL}}/img/svg/eyesblur.svg" type="image/svg+xml" class="eyesblur"/>
+           
+    <img src="{{STATIC_URL}}/img/svg/mouth.svg" type="image/svg+xml" class="mouth"/>
+    
+    <img src="{{STATIC_URL}}/img/svg/mouthopen.svg" type="image/svg+xml" class="mouthopen"/>
+    
+    <img src="{{STATIC_URL}}/img/svg/headnausea.svg" type="image/svg+xml" class="headnausea"/>
+
+    <div class="components">
+        <img src="{{STATIC_URL}}/img/svg/weightgain.svg" type="image/svg+xml" class="weightgain">
+        
+        <img src="{{STATIC_URL}}/img/svg/heart.svg" type="image/svg+xml" class="heart" />
+            
+        <img src="{{STATIC_URL}}/img/svg/stomach.svg" type="image/svg+xml" class="stomach"/>
+                
+        <img src="{{STATIC_URL}}/img/svg/bladder.svg" type="image/svg+xml" class="bladder"/>
+        
+        <img src="{{STATIC_URL}}/img/svg/largeintestine.svg" type="image/svg+xml" class="largeintestine"/>
+        
+        <img src="{{STATIC_URL}}/img/svg/kidneys.svg" type="image/svg+xml" class="kidneys"/>
+    </div>
+
+    <div class="extras">
+        <img src="{{STATIC_URL}}/img/svg/bloodpressuregauge.svg" type="image/svg+xml" class="bloodpressuregauge"/>
+        
+        <img src="{{STATIC_URL}}/img/svg/gaugebackground.svg" type="image/svg+xml" class="gaugebackground"/>
+        
+        <img src="{{STATIC_URL}}/img/svg/gaugeneedle.svg" type="image/svg+xml" class="gaugeneedle"/>
+        
+        <img src="{{STATIC_URL}}/img/svg/icepack.svg" type="image/svg+xml" class="icepack"/>
+        
+        <img src="{{STATIC_URL}}/img/svg/circle.svg" type="image/svg+xml" class="circleL"/>
+        <img src="{{STATIC_URL}}/img/svg/circle.svg" type="image/svg+xml" class="circleR"/>
+        
+        <img src="{{STATIC_URL}}/img/svg/sweatdrop.svg" type="image/svg+xml" class="sweatdrop"/>
+    </div>
+        
+
+</div>
+
+<div id="information"></div>
+
+<div id="control">
+    <div id="bodypart"></div>
+    <a id="next"><img src="{{STATIC_URL}}/img/svg/next.svg" type="image/svg+xml" /></a>
+    <a id="previous"><img src="{{STATIC_URL}}/img/svg/previous.svg" type="image/svg+xml" /></a>
+
+</div>
+
+{% endblock %}

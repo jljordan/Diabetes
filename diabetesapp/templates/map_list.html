@@ -1,19 +1,51 @@
 
+ {% extends "base.html" %}
+{% load humanize %}
+{% load url from future%}
 
-<! DOCTYPE html>
-  
-  <html>
-    <head>
-     <title> Map Data</title> 
-    </head>
-    
-    <body>
-      <h1> Welcome!</h1>
-      <p> Map Data will go here</p>
-      <p> {{Map.State}}</p>
+{% block content %}
+ 
+ 
+  <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Project name</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <h1>Map can be created here</h1>
+      <p>We can use this as a testing space for the map and then later put the map in the homepage</p>
+
+  <p> Some test data</p>
         {% for map in maps %}
-        <!-- {# Each "team" is a team model object. #}-->
+        <!-- {# Each "map" is a map model object. #}-->
+        <ul>
        <li>{{ map.State}} {{map.Year}} {{map.Eye}} {{map.Foot}} {{map.Blood}} {{map.Pne}}</li>
+        </ul>
         {% endfor %}
-    </body>
-  </html>
+       
+    
+    </div> <!-- /container -->
+
+
+{% endblock %}
+
+
+
+    
+   
